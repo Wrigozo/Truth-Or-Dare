@@ -11,17 +11,12 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.truthordare.api.JsonModel
 import com.example.truthordare.databinding.JsonelementsBinding
 
-class JsonAdapter : ListAdapter<JsonModel, JsonAdapter.ViewHolder>(
-    JsonDiffCallBack()
-) {
+
+class JsonAdapter(val clickListener: JsonListener) : ListAdapter<JsonModel, JsonAdapter.ViewHolder>(JsonDiffCallBack()) {
+
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        when (holder) {
-            is ViewHolder -> {
-                val jsonItem = getItem(position)
-                holder.bind(jsonItem)
-            }
-        }
+        holder.bind(getItem(position)!!, clickListener)
 
     }
 
@@ -32,11 +27,11 @@ class JsonAdapter : ListAdapter<JsonModel, JsonAdapter.ViewHolder>(
     }
 
 
-    class ViewHolder private constructor(val binding: JsonelementsBinding) :
-        RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder private constructor(val binding: JsonelementsBinding) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: JsonModel) {
+        fun bind(item: JsonModel, clickListener:JsonListener) {
             binding.jsonModel = item
+            binding.clickListener = clickListener
             binding.executePendingBindings()
         }
 
@@ -61,4 +56,8 @@ class JsonDiffCallBack : DiffUtil.ItemCallback<JsonModel>() {
     override fun areContentsTheSame(oldItem: JsonModel, newItem: JsonModel): Boolean {
         return oldItem == newItem
     }
+}
+
+class JsonListener(val clickListener: (jsonId: String) -> Unit) {
+    fun onClick(jsonModel: JsonModel) = clickListener(jsonModel.id)
 }

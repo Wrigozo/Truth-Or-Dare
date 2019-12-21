@@ -28,12 +28,12 @@ class JsonFragment : Fragment() {
 
     private lateinit var binding: JsonFragmentBinding
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
         binding = DataBindingUtil.inflate(inflater, R.layout.json_fragment, container, false)
-        val adapter = JsonAdapter()
+        val adapter = JsonAdapter(JsonListener { jsonId ->
+            Toast.makeText(context, "${jsonId}", Toast.LENGTH_LONG).show()
+        })
         binding.jsonList.adapter= adapter
         JsonApi().getData().enqueue(object : Callback<List<JsonModel>> {
 
