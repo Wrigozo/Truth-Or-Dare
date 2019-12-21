@@ -40,6 +40,12 @@ class StartViewModel(val database:PlayerDatabaseDao) : ViewModel() {
         }
     }
 
+    fun deletePlayers(){
+        uiScope.launch {
+            onCleared()
+        }
+    }
+
     override fun onCleared() {
         super.onCleared()
         viewModelJob.cancel()

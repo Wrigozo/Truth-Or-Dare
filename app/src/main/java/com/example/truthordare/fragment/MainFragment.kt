@@ -204,26 +204,26 @@ class MainFragment : Fragment() {
             viewModel.deleteDatabase()
             viewModel.buildDatabase(
                 listOf(
-                    Question( "Serenade the person to your right.", false),
-                    Question( "Talk in an accent for the next 3 rounds.", false),
-                    Question( "Kiss the person to your left.", false),
-                    Question( "Attempt to do a magic trick.", false),
-                    Question( "Do four cartwheels in row.", false),
-                    Question( "Let someone shave part of your body.", false),
-                    Question( "Eat five tablespoons of a condiment.", false),
-                    Question( "Be someone’s pet for the next 5 minutes.", false),
-                    Question( "Attempt to break dance for 30 seconds.", false),
-                    Question( "Let the group give you a new hairstyle.", false),
-                    Question( "Do the worm.", false),
-                    Question( "Curse like sailor for 20 seconds straight.", false),
-                    Question( "Sniff the armpits of everyone in the room.", false),
-                    Question( "Dance to a song of the group’s choosing.", false),
-                    Question( "Take a shower with your clothes on.", false),
-                    Question( "Break two eggs on your head.", false),
-                    Question( "Do your best impression of a baby being born.", false),
-                    Question( "Belly dance like your life depended on it.", false),
-                    Question( "Put 4 ice cubes down your pants.", false),
-                    Question( "Lick the floor.", false)
+                    Question("Serenade the person to your right.", false),
+                    Question("Talk in an accent for the next 3 rounds.", false),
+                    Question("Kiss the person to your left.", false),
+                    Question("Attempt to do a magic trick.", false),
+                    Question("Do four cartwheels in row.", false),
+                    Question("Let someone shave part of your body.", false),
+                    Question("Eat five tablespoons of a condiment.", false),
+                    Question("Be someone’s pet for the next 5 minutes.", false),
+                    Question("Attempt to break dance for 30 seconds.", false),
+                    Question("Let the group give you a new hairstyle.", false),
+                    Question("Do the worm.", false),
+                    Question("Curse like sailor for 20 seconds straight.", false),
+                    Question("Sniff the armpits of everyone in the room.", false),
+                    Question("Dance to a song of the group’s choosing.", false),
+                    Question("Take a shower with your clothes on.", false),
+                    Question("Break two eggs on your head.", false),
+                    Question("Do your best impression of a baby being born.", false),
+                    Question("Belly dance like your life depended on it.", false),
+                    Question("Put 4 ice cubes down your pants.", false),
+                    Question("Lick the floor.", false)
 
 
                 )
@@ -232,22 +232,22 @@ class MainFragment : Fragment() {
         binding.apply {
             viewModel.buildDatabase(
                 listOf(
-                    Question("What is your deepest darkest fear?",true),
-                    Question("Tell me about your first kiss.",true),
-                    Question("What are your top three turn-ons?",true),
-                    Question("Who is the sexiest person here?",true),
-                    Question("What is your biggest regret?",true),
-                    Question("Who here has the nicest butt?",true),
-                    Question("Who is your crush?",true),
-                    Question("Who was the last person you licked?",true),
-                    Question(  "Have you ever cheated or been cheated on?",true),
-                    Question(   "Tell me about your most awkward date.",true),
-                    Question(  "Have you ever made out with someone here?",true),
-                    Question( "What are you most self-conscious about?", true),
-                    Question( "When was the last time you peed in bed?",true),
-                    Question(  "What is the biggest lie you have ever told?",true),
-                    Question(  "What is the most embarrassing picture of you?",true)
-                    )
+                    Question("What is your deepest darkest fear?", true),
+                    Question("Tell me about your first kiss.", true),
+                    Question("What are your top three turn-ons?", true),
+                    Question("Who is the sexiest person here?", true),
+                    Question("What is your biggest regret?", true),
+                    Question("Who here has the nicest butt?", true),
+                    Question("Who is your crush?", true),
+                    Question("Who was the last person you licked?", true),
+                    Question("Have you ever cheated or been cheated on?", true),
+                    Question("Tell me about your most awkward date.", true),
+                    Question("Have you ever made out with someone here?", true),
+                    Question("What are you most self-conscious about?", true),
+                    Question("When was the last time you peed in bed?", true),
+                    Question("What is the biggest lie you have ever told?", true),
+                    Question("What is the most embarrassing picture of you?", true)
+                )
             )
         }
 
