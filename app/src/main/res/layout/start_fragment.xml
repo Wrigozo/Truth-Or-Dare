@@ -19,6 +19,7 @@
                 android:layout_width="180dp"
                 android:layout_height="60dp"
                 android:text="@string/next"
+                android:background="@color/colorAccent"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.857"
@@ -35,42 +36,44 @@
                 android:inputType="text"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.39"
+                app:layout_constraintHorizontal_bias="0.487"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.267"
-                tools:layout_editor_absoluteY="236dp" />
+                app:layout_constraintVertical_bias="0.164" />
 
             <Button
                 android:id="@+id/btnAdd"
                 android:layout_width="180dp"
                 android:layout_height="60dp"
+                android:background="@color/colorAccent"
                 android:text="@string/add"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintHorizontal_bias="0.493"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/setPlayer"
-                app:layout_constraintVertical_bias="0.108"
-                tools:layout_editor_absoluteX="115dp"
-                tools:layout_editor_absoluteY="335dp"
+                app:layout_constraintVertical_bias="0.045"
                 tools:text="Add" />
 
             <TextView
                 android:id="@+id/players"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="300dp"
+                android:layout_height="267dp"
+                android:gravity="center"
                 android:text="TextView"
-                tools:layout_editor_absoluteX="201dp"
-                tools:layout_editor_absoluteY="62dp" />
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/btnNext"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnAdd" />
 
             <TextView
                 android:id="@+id/transformation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@{model.stringPlayer}"
-                tools:layout_editor_absoluteX="104dp"
-                tools:layout_editor_absoluteY="132dp" />
+                tools:layout_editor_absoluteX="55dp"
+                tools:layout_editor_absoluteY="614dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

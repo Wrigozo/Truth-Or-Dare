@@ -46,7 +46,7 @@ class JsonFragment : Fragment() {
                 val inf = response.body()
 
                 inf?.let {
-                    adapter.submitList(it)
+                    adapter.addHeaderAndSubmitList(it)
                 }
             }
 
